@@ -1,0 +1,2019 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>男の疲労リセット TOMOYAMIN | 和歌山の出張リラクゼーション</title>
+  <meta name="description" content="田辺市・上富田町・白浜町対応。男の疲労リセット TOMOYAMIN。現場仕事やデスクワークで限界を迎えた男性のための、完全男性専用・出張リラクゼーション。" />
+  <meta property="og:title" content="男の疲労リセット TOMOYAMIN | 和歌山の出張リラクゼーション" />
+  <meta property="og:description" content="田辺市・上富田町・白浜町対応。完全男性専用の出張リラクゼーション。準備不要・移動不要で、あなたの自宅で疲労リセット。" />
+  <meta property="og:type" content="website" />
+  <style>
+    /* ===========================
+       DESIGN TOKENS
+    =========================== */
+    :root {
+      --sumi: #1b1b1b;
+      --indigo: #243a5e;
+      --gold: #8e7442;
+      --gold-light: #b89a5e;
+      --ivory: #f5f0e6;
+      --paper: #f8f5ee;
+      --border: #d8cfbf;
+      --text: #222222;
+      --subtext: #5a564f;
+      --white: #ffffff;
+      --green: #06c755;
+      --shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+      --shadow-lg: 0 20px 50px rgba(0, 0, 0, 0.18);
+      --radius: 16px;
+      --max: 1120px;
+    }
+
+    /* ===========================
+       RESET & BASE
+    =========================== */
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      margin: 0;
+      font-family: "Hiragino Kaku Gothic ProN", "Yu Gothic", "Meiryo", sans-serif;
+      color: var(--text);
+      background: var(--paper);
+      line-height: 1.8;
+      letter-spacing: 0.03em;
+    }
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+
+    /* ===========================
+       SCROLL ANIMATION
+    =========================== */
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.65s ease, transform 0.65s ease;
+    }
+    .reveal.revealed {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
+    .reveal-delay-4 { transition-delay: 0.4s; }
+
+    /* ===========================
+       LAYOUT
+    =========================== */
+    .container {
+      width: min(92%, var(--max));
+      margin: 0 auto;
+    }
+    .section {
+      padding: 72px 0;
+    }
+    .section-eyebrow {
+      display: inline-block;
+      font-size: 0.8rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    .section-title {
+      font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+      line-height: 1.4;
+      margin: 0 0 14px;
+      color: var(--sumi);
+      font-weight: 800;
+    }
+    .section-lead {
+      font-size: 1rem;
+      color: var(--subtext);
+      margin: 0 0 36px;
+      max-width: 640px;
+    }
+
+    /* ===========================
+       BADGES
+    =========================== */
+    .badge {
+      display: inline-block;
+      padding: 6px 14px;
+      border: 1px solid rgba(255,255,255,0.35);
+      color: var(--ivory);
+      font-size: 0.82rem;
+      border-radius: 999px;
+      margin-bottom: 20px;
+      background: rgba(255,255,255,0.08);
+      backdrop-filter: blur(6px);
+      letter-spacing: 0.06em;
+    }
+
+    /* ===========================
+       HEADER
+    =========================== */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      background: rgba(27, 27, 27, 0.94);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+    }
+    .site-header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      min-height: 72px;
+    }
+    .logo {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.3;
+      gap: 2px;
+    }
+    .logo small {
+      color: #b0a898;
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+    }
+    .logo strong {
+      color: var(--ivory);
+      font-size: 0.98rem;
+    }
+    .header-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      background: var(--green);
+      color: #fff;
+      font-weight: 800;
+      padding: 11px 20px;
+      border-radius: 999px;
+      font-size: 0.92rem;
+      white-space: nowrap;
+      transition: 0.22s ease;
+      box-shadow: 0 4px 14px rgba(6,199,85,0.35);
+    }
+    .header-cta:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(6,199,85,0.45);
+    }
+    .header-cta svg { width: 18px; height: 18px; flex-shrink: 0; }
+
+    /* ===========================
+       HERO  (CSS-only background)
+    =========================== */
+    .hero {
+      position: relative;
+      overflow: hidden;
+      background:
+        linear-gradient(155deg, rgba(18,18,18,0.97) 0%, rgba(24,32,48,0.95) 55%, rgba(18,18,18,0.97) 100%);
+      color: var(--white);
+      padding: 80px 0 64px;
+    }
+    /* Decorative layers */
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 60% 50% at 80% 20%, rgba(142,116,66,0.22), transparent),
+        radial-gradient(ellipse 50% 60% at 10% 80%, rgba(36,58,94,0.32), transparent);
+      pointer-events: none;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image:
+        repeating-linear-gradient(
+          -45deg,
+          transparent 0px,
+          transparent 60px,
+          rgba(255,255,255,0.012) 60px,
+          rgba(255,255,255,0.012) 61px
+        );
+      pointer-events: none;
+    }
+    /* Floating gold accent orb */
+    .hero-orb {
+      position: absolute;
+      width: 480px;
+      height: 480px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(142,116,66,0.12) 0%, transparent 70%);
+      top: -100px;
+      right: -80px;
+      pointer-events: none;
+      animation: orbFloat 8s ease-in-out infinite;
+    }
+    @keyframes orbFloat {
+      0%, 100% { transform: translateY(0) scale(1); }
+      50% { transform: translateY(-20px) scale(1.04); }
+    }
+    .hero-inner {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 48px;
+      align-items: center;
+    }
+    .hero-copy h1 {
+      font-size: clamp(2.1rem, 6vw, 4rem);
+      line-height: 1.2;
+      margin: 0 0 20px;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+    }
+    .hero-copy h1 em {
+      font-style: normal;
+      color: var(--gold-light);
+      position: relative;
+    }
+    .hero-copy p {
+      margin: 0 0 16px;
+      color: rgba(255,255,255,0.88);
+      font-size: 1rem;
+    }
+    .hero-points {
+      list-style: none;
+      padding: 0;
+      margin: 22px 0;
+      display: grid;
+      gap: 10px;
+    }
+    .hero-points li {
+      padding-left: 1.7em;
+      position: relative;
+      color: #f2eadf;
+      font-size: 0.97rem;
+    }
+    .hero-points li::before {
+      content: "◆";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: var(--gold-light);
+      font-size: 0.75em;
+      top: 0.3em;
+    }
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      min-height: 52px;
+      padding: 14px 24px;
+      border-radius: 999px;
+      font-weight: 800;
+      transition: 0.22s ease;
+      text-align: center;
+      font-size: 0.96rem;
+    }
+    .btn svg { width: 20px; height: 20px; flex-shrink: 0; }
+    .btn-primary {
+      background: var(--green);
+      color: #fff;
+      box-shadow: 0 6px 20px rgba(6,199,85,0.4);
+    }
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 28px rgba(6,199,85,0.5);
+    }
+    .btn-secondary {
+      border: 1px solid rgba(255,255,255,0.32);
+      color: #fff;
+      background: rgba(255,255,255,0.06);
+    }
+    .btn-secondary:hover {
+      background: rgba(255,255,255,0.12);
+    }
+    .btn-dark {
+      background: var(--sumi);
+      color: #fff;
+      box-shadow: var(--shadow);
+    }
+    .btn-dark:hover {
+      transform: translateY(-2px);
+      background: #2a2a2a;
+    }
+
+    /* Hero card */
+    .hero-card {
+      background: rgba(245, 240, 230, 0.97);
+      color: var(--sumi);
+      border-radius: 22px;
+      padding: 26px;
+      box-shadow: var(--shadow-lg);
+      border: 1px solid rgba(255,255,255,0.6);
+      backdrop-filter: blur(4px);
+    }
+    .hero-card-badge {
+      display: inline-block;
+      background: var(--indigo);
+      color: #fff;
+      font-size: 0.76rem;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 999px;
+      margin-bottom: 14px;
+      letter-spacing: 0.06em;
+    }
+    .hero-card-title {
+      font-size: 1.08rem;
+      font-weight: 800;
+      margin: 0 0 16px;
+      color: var(--sumi);
+      line-height: 1.4;
+    }
+    .hero-card-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: 10px;
+    }
+    .hero-card-list li {
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 10px;
+      font-size: 0.93rem;
+      color: var(--text);
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+    }
+    .hero-card-list li:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+    .hero-card-list li::before {
+      content: "✓";
+      color: var(--green);
+      font-weight: 800;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .hero-note {
+      margin-top: 16px;
+      font-size: 0.82rem;
+      color: var(--subtext);
+      background: var(--ivory);
+      border-radius: 8px;
+      padding: 10px 12px;
+      border-left: 3px solid var(--gold);
+    }
+
+    /* ===========================
+       LINE TOKUTEN BANNER
+    =========================== */
+    .line-tokuten {
+      background: linear-gradient(135deg, #00a040 0%, #06c755 50%, #00b347 100%);
+      padding: 0;
+      position: relative;
+      overflow: hidden;
+    }
+    .line-tokuten::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image:
+        repeating-linear-gradient(
+          -45deg,
+          transparent 0px,
+          transparent 24px,
+          rgba(255,255,255,0.04) 24px,
+          rgba(255,255,255,0.04) 25px
+        );
+      pointer-events: none;
+    }
+    .line-tokuten-inner {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      gap: 24px;
+      align-items: center;
+      padding: 28px 0;
+    }
+    .line-tokuten-label {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+      background: rgba(0,0,0,0.18);
+      border-radius: 14px;
+      padding: 14px 20px;
+      flex-shrink: 0;
+    }
+    .line-tokuten-label svg {
+      width: 32px;
+      height: 32px;
+      color: #fff;
+    }
+    .line-tokuten-label span {
+      color: #fff;
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      white-space: nowrap;
+    }
+    .line-tokuten-title {
+      color: #fff;
+      font-size: clamp(1rem, 2.5vw, 1.3rem);
+      font-weight: 900;
+      line-height: 1.35;
+      margin: 0 0 10px;
+    }
+    .line-tokuten-title em {
+      font-style: normal;
+      background: rgba(255,255,255,0.22);
+      border-radius: 4px;
+      padding: 1px 6px;
+    }
+    .line-tokuten-benefits {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .tokuten-chip {
+      background: rgba(255,255,255,0.18);
+      border: 1px solid rgba(255,255,255,0.4);
+      border-radius: 999px;
+      padding: 7px 14px;
+      color: #fff;
+      font-size: 0.88rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      backdrop-filter: blur(4px);
+    }
+    .tokuten-chip::before {
+      content: "✓";
+      font-weight: 900;
+      font-size: 0.85em;
+    }
+    .line-tokuten-cta {
+      flex-shrink: 0;
+    }
+    .btn-line-tokuten {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: #fff;
+      color: #06c755;
+      font-weight: 900;
+      font-size: 0.95rem;
+      padding: 14px 22px;
+      border-radius: 999px;
+      white-space: nowrap;
+      transition: 0.22s ease;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+    }
+    .btn-line-tokuten:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.22);
+    }
+    .btn-line-tokuten svg {
+      width: 18px;
+      height: 18px;
+    }
+    @media (max-width: 960px) {
+      .line-tokuten-inner {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        text-align: center;
+      }
+      .line-tokuten-label {
+        flex-direction: row;
+        justify-content: center;
+        width: fit-content;
+        margin: 0 auto;
+        padding: 10px 18px;
+      }
+      .line-tokuten-benefits {
+        justify-content: center;
+      }
+      .line-tokuten-cta {
+        display: flex;
+        justify-content: center;
+      }
+    }
+
+    /* ===========================
+       PROBLEM
+    =========================== */
+    .problem-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+    .card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.04);
+      transition: transform 0.22s ease, box-shadow 0.22s ease;
+    }
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 14px 30px rgba(0,0,0,0.09);
+    }
+    .card-icon {
+      font-size: 1.6rem;
+      margin-bottom: 12px;
+    }
+    .card h3 {
+      margin: 0 0 10px;
+      font-size: 1.05rem;
+      color: var(--indigo);
+      font-weight: 700;
+    }
+    .card p {
+      margin: 0;
+      color: var(--subtext);
+      font-size: 0.94rem;
+    }
+
+    /* ===========================
+       STORY
+    =========================== */
+    .story {
+      background: linear-gradient(180deg, #faf7f0 0%, #f0e8da 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    .story::before {
+      content: "職 人";
+      position: absolute;
+      right: -10px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 10rem;
+      font-weight: 900;
+      color: rgba(142,116,66,0.05);
+      letter-spacing: -0.05em;
+      line-height: 1;
+      pointer-events: none;
+      white-space: nowrap;
+    }
+    .story-box {
+      background: rgba(255,255,255,0.72);
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      padding: 36px;
+      box-shadow: var(--shadow);
+      position: relative;
+      z-index: 1;
+      border-left: 6px solid var(--gold);
+    }
+    .story-box p {
+      margin: 0 0 18px;
+      color: var(--text);
+      font-size: 1.02rem;
+    }
+    .story-box p:last-child { margin-bottom: 0; }
+    .story-box strong { color: var(--indigo); }
+
+    /* ===========================
+       PROFILE
+    =========================== */
+    .profile {
+      background: var(--sumi);
+      color: var(--ivory);
+      position: relative;
+      overflow: hidden;
+    }
+    .profile::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 50% 60% at 90% 50%, rgba(142,116,66,0.15), transparent),
+        radial-gradient(ellipse 40% 40% at 10% 30%, rgba(36,58,94,0.25), transparent);
+      pointer-events: none;
+    }
+    .profile .section-title { color: var(--ivory); }
+    .profile .section-eyebrow { color: var(--gold-light); }
+    .profile-inner {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 48px;
+      align-items: center;
+    }
+    .profile-avatar {
+      aspect-ratio: 1;
+      max-width: 320px;
+      border-radius: 22px;
+      background:
+        linear-gradient(145deg, rgba(142,116,66,0.18) 0%, rgba(36,58,94,0.25) 100%);
+      border: 2px solid rgba(255,255,255,0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .profile-avatar-inner {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      color: rgba(255,255,255,0.5);
+      font-size: 0.9rem;
+      letter-spacing: 0.08em;
+    }
+    .profile-avatar-inner img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+    }
+    .profile-avatar-icon {
+      font-size: 4.5rem;
+      line-height: 1;
+      filter: opacity(0.4);
+    }
+    .profile-career {
+      display: grid;
+      gap: 14px;
+      margin-top: 24px;
+    }
+    .career-item {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+    }
+    .career-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--gold-light);
+      flex-shrink: 0;
+      margin-top: 7px;
+    }
+    .career-item p {
+      margin: 0;
+      font-size: 0.96rem;
+      color: rgba(255,255,255,0.88);
+    }
+    .career-item strong {
+      color: var(--gold-light);
+    }
+    .profile-quote {
+      margin-top: 28px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-left: 4px solid var(--gold);
+      border-radius: 12px;
+      padding: 20px 22px;
+      font-size: 1rem;
+      color: rgba(255,255,255,0.92);
+      font-style: italic;
+      line-height: 1.9;
+    }
+
+    /* ===========================
+       STRENGTH
+    =========================== */
+    .strength-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+    .strength-item {
+      background: var(--white);
+      border-left: 5px solid var(--gold);
+      border-radius: 14px;
+      padding: 24px;
+      box-shadow: 0 10px 24px rgba(0,0,0,0.05);
+      transition: transform 0.22s ease, box-shadow 0.22s ease;
+    }
+    .strength-item:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 18px 36px rgba(0,0,0,0.09);
+    }
+    .strength-num {
+      font-size: 2.4rem;
+      font-weight: 900;
+      color: rgba(142,116,66,0.15);
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+    .strength-item h3 {
+      margin: 0 0 8px;
+      font-size: 1.06rem;
+      color: var(--sumi);
+      font-weight: 700;
+    }
+    .strength-item p {
+      margin: 0;
+      color: var(--subtext);
+      font-size: 0.94rem;
+    }
+
+    /* ===========================
+       FLOW
+    =========================== */
+    .flow {
+      background: var(--ivory);
+      position: relative;
+    }
+    .flow-steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      position: relative;
+    }
+    .flow-steps::before {
+      content: "";
+      position: absolute;
+      top: 21px;
+      left: calc(33.33% - 10px);
+      width: calc(33.33% + 20px);
+      height: 2px;
+      background: linear-gradient(90deg, var(--gold), var(--gold));
+      opacity: 0.3;
+    }
+    .step {
+      background: var(--white);
+      border-radius: 18px;
+      padding: 26px;
+      border: 1px solid var(--border);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.04);
+      text-align: center;
+    }
+    .step-number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--indigo), #1a2d4a);
+      color: #fff;
+      font-weight: 800;
+      font-size: 1.1rem;
+      margin-bottom: 16px;
+      box-shadow: 0 4px 12px rgba(36,58,94,0.35);
+    }
+    .step h3 {
+      margin: 0 0 10px;
+      font-size: 1.04rem;
+      color: var(--sumi);
+      font-weight: 700;
+    }
+    .step p {
+      margin: 0;
+      color: var(--subtext);
+      font-size: 0.93rem;
+    }
+
+    /* ===========================
+       PRICING
+    =========================== */
+    .pricing-wrap {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 26px;
+      align-items: start;
+    }
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+    .menu-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 22px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+      transition: transform 0.22s ease, box-shadow 0.22s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    .menu-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--gold), var(--gold-light));
+    }
+    .menu-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 18px 36px rgba(0,0,0,0.1);
+    }
+    .menu-card.featured {
+      border-color: var(--indigo);
+      box-shadow: 0 12px 32px rgba(36,58,94,0.15);
+    }
+    .menu-card.featured::before {
+      background: linear-gradient(90deg, var(--indigo), #3a5a8e);
+    }
+    .menu-badge {
+      display: inline-block;
+      background: var(--indigo);
+      color: #fff;
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 999px;
+      margin-bottom: 10px;
+      letter-spacing: 0.06em;
+    }
+    .menu-time {
+      color: var(--gold);
+      font-size: 0.9rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+    .menu-title {
+      font-size: 1.08rem;
+      font-weight: 800;
+      margin-bottom: 10px;
+      color: var(--sumi);
+    }
+    .menu-price {
+      font-size: 1.9rem;
+      font-weight: 900;
+      color: var(--indigo);
+      line-height: 1.2;
+      margin-bottom: 10px;
+    }
+    .menu-price small {
+      font-size: 0.9rem;
+      font-weight: 400;
+      color: var(--subtext);
+    }
+    .menu-card p {
+      margin: 0;
+      color: var(--subtext);
+      font-size: 0.92rem;
+    }
+    .pricing-side {
+      display: grid;
+      gap: 16px;
+    }
+    .side-box {
+      background: linear-gradient(160deg, #243a5e 0%, #1b1b1b 100%);
+      color: #fff;
+      border-radius: 18px;
+      padding: 22px;
+      box-shadow: var(--shadow);
+    }
+    .side-box h3 {
+      margin: 0 0 12px;
+      font-size: 1.02rem;
+      color: var(--ivory);
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      padding-bottom: 10px;
+    }
+    .side-box ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .side-box li {
+      padding: 6px 0;
+      color: rgba(255,255,255,0.88);
+      font-size: 0.94rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+    }
+    .side-box li::before {
+      content: "→";
+      color: var(--gold-light);
+      flex-shrink: 0;
+    }
+    .side-box strong { color: #ffe3a7; }
+    .side-box.light {
+      background: var(--white);
+      color: var(--text);
+      border: 1px solid var(--border);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+    }
+    .side-box.light h3 { color: var(--indigo); }
+    .side-box.light li { color: var(--subtext); }
+    .side-box.light li::before { color: var(--gold); }
+
+    /* ===========================
+       SAFETY
+    =========================== */
+    .safety {
+      background: linear-gradient(180deg, #1b1b1b 0%, #242424 100%);
+      color: var(--ivory);
+    }
+    .safety .section-title,
+    .safety .section-eyebrow { color: var(--ivory); }
+    .safety .section-eyebrow { color: var(--gold-light); }
+    .safety-box {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-left: 5px solid var(--gold);
+      border-radius: 18px;
+      padding: 30px;
+    }
+    .safety-box p {
+      margin: 0 0 14px;
+      color: rgba(255,255,255,0.9);
+      font-size: 0.98rem;
+    }
+    .safety-box p:last-child { margin-bottom: 0; }
+    .safety-box strong { color: #ffe3a7; }
+
+    /* ===========================
+       SCENES
+    =========================== */
+    .scene-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    /* ===========================
+       VOICES
+    =========================== */
+    .voice-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    .voice-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 26px;
+      box-shadow: 0 8px 18px rgba(0,0,0,0.04);
+      position: relative;
+    }
+    .voice-quote-mark {
+      font-size: 3.5rem;
+      color: rgba(142,116,66,0.12);
+      font-family: Georgia, serif;
+      line-height: 1;
+      margin-bottom: -10px;
+      display: block;
+    }
+    .voice-card p {
+      margin: 0 0 14px;
+      color: var(--text);
+      font-size: 0.95rem;
+      line-height: 1.85;
+    }
+    .voice-footer {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .voice-avatar {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--indigo), var(--gold));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 0.8rem;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+    .voice-card span {
+      color: var(--subtext);
+      font-size: 0.88rem;
+    }
+    .voice-stars {
+      color: #f5a623;
+      font-size: 0.85rem;
+      margin-bottom: 6px;
+    }
+
+    /* ===========================
+       FAQ
+    =========================== */
+    .faq {
+      background: linear-gradient(180deg, #f8f5ee 0%, #f0e8da 100%);
+    }
+    .faq-list {
+      display: grid;
+      gap: 12px;
+    }
+    .faq-item {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+    }
+    .faq-question {
+      width: 100%;
+      background: none;
+      border: none;
+      padding: 20px 24px;
+      text-align: left;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      font-family: inherit;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--sumi);
+      transition: background 0.2s ease;
+    }
+    .faq-question:hover {
+      background: var(--paper);
+    }
+    .faq-q-label {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: var(--indigo);
+      color: #fff;
+      font-size: 0.82rem;
+      font-weight: 800;
+      flex-shrink: 0;
+    }
+    .faq-icon {
+      margin-left: auto;
+      width: 22px;
+      height: 22px;
+      flex-shrink: 0;
+      color: var(--gold);
+      transition: transform 0.28s ease;
+    }
+    .faq-item.open .faq-icon {
+      transform: rotate(45deg);
+    }
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.36s ease, padding 0.28s ease;
+    }
+    .faq-item.open .faq-answer {
+      max-height: 300px;
+    }
+    .faq-answer-inner {
+      padding: 0 24px 20px 66px;
+      color: var(--subtext);
+      font-size: 0.95rem;
+      line-height: 1.85;
+    }
+    .faq-a-label {
+      color: var(--gold);
+      font-weight: 700;
+    }
+
+    /* ===========================
+       AREA
+    =========================== */
+    .area-box {
+      background: var(--white);
+      border-radius: 20px;
+      border: 1px solid var(--border);
+      padding: 28px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+    }
+    .area-box p {
+      color: var(--subtext);
+      margin: 0 0 16px;
+      font-size: 0.96rem;
+    }
+    .area-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 18px;
+    }
+    .area-chip {
+      background: var(--ivory);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 10px 18px;
+      font-size: 0.93rem;
+      color: var(--sumi);
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .area-chip::before {
+      content: "📍";
+      font-size: 0.85em;
+    }
+    .area-note {
+      background: var(--ivory);
+      border-radius: 10px;
+      padding: 14px 16px;
+      font-size: 0.88rem;
+      color: var(--subtext);
+      border-left: 3px solid var(--gold);
+    }
+
+    /* ===========================
+       FINAL CTA
+    =========================== */
+    .final-cta {
+      background:
+        linear-gradient(145deg, #111111 0%, #1a2535 50%, #111111 100%);
+      color: #fff;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .final-cta::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 60% 70% at 50% 50%, rgba(142,116,66,0.12), transparent);
+      pointer-events: none;
+    }
+    .final-cta::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image:
+        repeating-linear-gradient(
+          45deg,
+          transparent 0px,
+          transparent 60px,
+          rgba(255,255,255,0.01) 60px,
+          rgba(255,255,255,0.01) 61px
+        );
+      pointer-events: none;
+    }
+    .final-cta .section-title { color: #fff; }
+    .final-cta-inner {
+      position: relative;
+      z-index: 1;
+    }
+    .final-cta p {
+      color: rgba(255,255,255,0.86);
+      max-width: 720px;
+      margin: 0 auto 28px;
+      font-size: 1.02rem;
+    }
+    .cta-box {
+      max-width: 680px;
+      margin: 0 auto;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.14);
+      border-radius: 24px;
+      padding: 36px;
+      backdrop-filter: blur(8px);
+    }
+    .cta-copy {
+      font-size: clamp(1.2rem, 3vw, 1.65rem);
+      font-weight: 800;
+      margin: 0 0 10px;
+      line-height: 1.4;
+    }
+    .cta-sub {
+      font-size: 0.96rem;
+      margin: 0 0 26px;
+      color: rgba(255,255,255,0.8);
+    }
+    .cta-btns {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+    .cta-note {
+      font-size: 0.86rem;
+      margin-top: 6px;
+      color: rgba(255,255,255,0.6);
+    }
+
+    /* ===========================
+       FOOTER
+    =========================== */
+    .site-footer {
+      background: #0d0d0d;
+      color: rgba(255,255,255,0.6);
+      padding: 32px 0;
+      font-size: 0.88rem;
+      text-align: center;
+    }
+    .site-footer a {
+      color: rgba(255,255,255,0.85);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .site-footer p { margin: 6px 0; }
+
+    /* ===========================
+       FIXED MOBILE LINE CTA
+    =========================== */
+    .fixed-line-cta {
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 998;
+      display: none;
+      padding: 10px 16px calc(10px + env(safe-area-inset-bottom));
+      background: rgba(15,15,15,0.94);
+      backdrop-filter: blur(10px);
+      border-top: 1px solid rgba(255,255,255,0.07);
+    }
+    .fixed-line-cta a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      min-height: 54px;
+      border-radius: 999px;
+      background: var(--green);
+      color: #fff;
+      font-weight: 800;
+      font-size: 1rem;
+      box-shadow: 0 6px 20px rgba(6,199,85,0.45);
+    }
+    .fixed-line-cta svg { width: 20px; height: 20px; }
+
+    /* ===========================
+       DIVIDER
+    =========================== */
+    .divider {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--border), transparent);
+      margin: 0;
+    }
+
+    /* ===========================
+       RESPONSIVE
+    =========================== */
+    @media (max-width: 960px) {
+      .hero-inner,
+      .profile-inner,
+      .pricing-wrap {
+        grid-template-columns: 1fr;
+      }
+      .flow-steps,
+      .scene-grid,
+      .voice-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      .flow-steps::before { display: none; }
+      .problem-grid,
+      .strength-grid,
+      .menu-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      .profile-avatar {
+        max-width: 220px;
+        aspect-ratio: 1;
+        margin: 0 auto;
+      }
+    }
+    @media (max-width: 768px) {
+      .site-header-inner { min-height: 64px; }
+      .logo strong { font-size: 0.9rem; }
+      .header-cta { padding: 10px 15px; font-size: 0.86rem; }
+      .section { padding: 56px 0; }
+      .hero { padding: 64px 0 52px; }
+      .story-box { padding: 24px; }
+      .card, .strength-item, .step, .menu-card, .voice-card, .area-box, .safety-box, .side-box { padding: 18px; }
+      .faq-answer-inner { padding-left: 24px; }
+      .fixed-line-cta { display: block; }
+      body { padding-bottom: 88px; }
+      .flow-steps { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 560px) {
+      .hero-copy h1 { font-size: 1.9rem; }
+      .btn { width: 100%; }
+      .hero-actions { flex-direction: column; }
+      .section-title { font-size: 1.5rem; }
+      .problem-grid,
+      .strength-grid,
+      .menu-grid,
+      .voice-grid,
+      .scene-grid {
+        grid-template-columns: 1fr;
+      }
+      .cta-box { padding: 24px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===========================
+       HEADER
+  =========================== -->
+  <header class="site-header">
+    <div class="container site-header-inner">
+      <a href="#" class="logo">
+        <small>和歌山・出張リラクゼーション</small>
+        <strong>男の疲労リセット TOMOYAMIN</strong>
+      </a>
+      <a href="https://line.me/R/ti/p/@750oaokk" class="header-cta" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2C6.48 2 2 5.94 2 10.77c0 2.68 1.33 5.07 3.42 6.69.14.11.23.29.2.47l-.38 1.83a.44.44 0 0 0 .62.48l2.04-1.01c.15-.07.32-.09.48-.04.61.18 1.25.28 1.92.28 1.64 0 3.15-.5 4.36-1.33-.13 0-.26.01-.39.01-3.15 0-5.7-2.18-5.7-4.87 0-2.69 2.55-4.87 5.7-4.87 3.15 0 5.7 2.18 5.7 4.87 0 .33-.04.65-.1.96C21.5 12.87 22 11.86 22 10.77 22 5.94 17.52 2 12 2Z"/>
+          <path d="M9.5 11.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0ZM13 11.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0ZM16.5 11.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"/>
+        </svg>
+        LINEで予約する
+      </a>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ===========================
+         HERO
+    =========================== -->
+    <section class="hero">
+      <div class="hero-orb"></div>
+      <div class="container hero-inner">
+        <div class="hero-copy reveal">
+          <div class="badge">完全男性専用 ／ 田辺市・上富田町・白浜町対応</div>
+          <h1>もう限界か。<br><em>その疲労、</em><br>家で斬る。</h1>
+          <p>
+            温浴施設で10年間、限界を迎えた男たちの体を揉みほぐしてきた職人が、
+            あなたの自宅へ参る。
+          </p>
+          <p>
+            準備は不要。移動も不要。約2畳のスペースがあれば、
+            その場が"整う場所"に変わる。
+          </p>
+          <ul class="hero-points">
+            <li>現場仕事で足腰を酷使する男へ</li>
+            <li>PC作業で眼精疲労や首肩のコリに悩む男へ</li>
+            <li>終わった後、そのまま自分の布団で眠れる至福</li>
+          </ul>
+          <div class="hero-actions">
+            <a href="https://line.me/R/ti/p/@750oaokk" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 5.94 2 10.77c0 2.68 1.33 5.07 3.42 6.69.14.11.23.29.2.47l-.38 1.83a.44.44 0 0 0 .62.48l2.04-1.01c.15-.07.32-.09.48-.04.61.18 1.25.28 1.92.28 1.64 0 3.15-.5 4.36-1.33-.13 0-.26.01-.39.01-3.15 0-5.7-2.18-5.7-4.87 0-2.69 2.55-4.87 5.7-4.87 3.15 0 5.7 2.18 5.7 4.87 0 .33-.04.65-.1.96C21.5 12.87 22 11.86 22 10.77 22 5.94 17.52 2 12 2Z"/></svg>
+              今すぐLINEで空き状況を確認
+            </a>
+            <a href="#price" class="btn btn-secondary">
+              料金を見る ↓
+            </a>
+          </div>
+        </div>
+        <div class="hero-card reveal reveal-delay-2">
+          <div class="hero-card-badge">TOMOYAMIN</div>
+          <p class="hero-card-title">男の疲労リセット<br>出張リラクゼーション</p>
+          <ul class="hero-card-list">
+            <li>完全男性専用で安心の施術環境</li>
+            <li>高品質ポータブルベッドを持ち込み可能</li>
+            <li>事前決済 or 90分以上で出張費無料</li>
+            <li>LINEで完結・現金不要でスムーズ</li>
+          </ul>
+          <div class="hero-note">
+            ※ご夫婦同席でご主人様がご同行の場合のみ、奥様も対応可
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===========================
+         LINE TOKUTEN BANNER
+    =========================== -->
+    <section class="line-tokuten">
+      <div class="container line-tokuten-inner">
+        <div class="line-tokuten-label">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 5.94 2 10.77c0 2.68 1.33 5.07 3.42 6.69.14.11.23.29.2.47l-.38 1.83a.44.44 0 0 0 .62.48l2.04-1.01c.15-.07.32-.09.48-.04.61.18 1.25.28 1.92.28 1.64 0 3.15-.5 4.36-1.33-.13 0-.26.01-.39.01-3.15 0-5.7-2.18-5.7-4.87 0-2.69 2.55-4.87 5.7-4.87 3.15 0 5.7 2.18 5.7 4.87 0 .33-.04.65-.1.96C21.5 12.87 22 11.86 22 10.77 22 5.94 17.52 2 12 2Z"/></svg>
+          <span>LINE登録特典</span>
+        </div>
+        <div>
+          <p class="line-tokuten-title">友だち追加した方限定で、<em>お得な特典</em>をプレゼント。</p>
+          <div class="line-tokuten-benefits">
+            <span class="tokuten-chip">事前決済で出張費が無料</span>
+            <span class="tokuten-chip">90分以上のコースで出張費が無料</span>
+          </div>
+        </div>
+        <div class="line-tokuten-cta">
+          <a href="https://line.me/R/ti/p/@750oaokk" class="btn-line-tokuten" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 5.94 2 10.77c0 2.68 1.33 5.07 3.42 6.69.14.11.23.29.2.47l-.38 1.83a.44.44 0 0 0 .62.48l2.04-1.01c.15-.07.32-.09.48-.04.61.18 1.25.28 1.92.28 1.64 0 3.15-.5 4.36-1.33-.13 0-.26.01-.39.01-3.15 0-5.7-2.18-5.7-4.87 0-2.69 2.55-4.87 5.7-4.87 3.15 0 5.7 2.18 5.7 4.87 0 .33-.04.65-.1.96C21.5 12.87 22 11.86 22 10.77 22 5.94 17.52 2 12 2Z"/></svg>
+            今すぐ友だち追加
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===========================
+         PROBLEM
+    =========================== -->
+    <section class="section">
+      <div class="container">
+        <div class="section-eyebrow reveal">こんな状態、放置してませんか？</div>
+        <h2 class="section-title reveal">体からの警告を、<br>無視し続けていませんか。</h2>
+        <p class="section-lead reveal">
+          それは気合い不足ではなく、体が出しているSOSかもしれません。
+        </p>
+        <div class="problem-grid">
+          <div class="card reveal reveal-delay-1">
+            <div class="card-icon">😮‍💨</div>
+            <h3>仕事終わり、もう外に出たくない</h3>
+            <p>
+              店に行く気力すらない。けれど、体は明らかに重い。
+              そんな夜が続いていないでしょうか。
+            </p>
+          </div>
+          <div class="card reveal reveal-delay-2">
+            <div class="card-icon">🦵</div>
+            <h3>足腰が抜けないほど張っている</h3>
+            <p>
+              現場仕事、立ち仕事、運転続き。足も腰もパンパンのまま、
+              次の日を迎えてしまっている。
+            </p>
+          </div>
+          <div class="card reveal reveal-delay-3">
+            <div class="card-icon">👁️</div>
+            <h3>首肩と目の奥がずっとしんどい</h3>
+            <p>
+              長時間のPC作業、スマホ、神経疲労。
+              体だけでなく、集中力まで削られている。
+            </p>
+          </div>
+          <div class="card reveal reveal-delay-4">
+            <div class="card-icon">😴</div>
+            <h3>休んでも疲れが抜けない</h3>
+            <p>
+              横になっても回復しない。
+              ただ寝るだけでは解けない疲労が、深く溜まっています。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ===========================
+         STORY
+    =========================== -->
+    <section class="section story">
+      <div class="container">
+        <div class="section-eyebrow reveal">TOMOYAMIN について</div>
+        <h2 class="section-title reveal">男の疲労を、<br>己の腕ひとつで斬る。</h2>
+        <div class="story-box reveal">
+          <p>
+            「男の疲労リセット TOMOYAMIN」は、ただ体を揉むための出張サービスではありません。
+          </p>
+          <p>
+            <strong>温浴施設で10年間。</strong>数えきれないほどの"限界を超えた男たち"の体に触れ、
+            その日の仕事、その人の癖、その人の無理を見抜いてきました。
+          </p>
+          <p>
+            現場で削れた足腰。デスクで固まった首肩。抜けない眼精疲労。
+            その疲れ方には、<strong>男特有のパターン</strong>があります。
+          </p>
+          <p>
+            作務衣をまとい、余計な飾りを削ぎ落とし、
+            本当に必要な施術だけを届ける。それがTOMOYAMINの流儀です。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===========================
+         PROFILE
+    =========================== -->
+    <section class="section profile">
+      <div class="container profile-inner">
+        <div class="profile-avatar reveal">
+          <div class="profile-avatar-inner">
+            <img src="profile.jpg" alt="施術者 TOMOYAMIN" />
+          </div>
+        </div>
+        <div class="reveal reveal-delay-1">
+          <div class="section-eyebrow">施術者紹介</div>
+          <h2 class="section-title">10年の現場経験が、<br>すべての根拠。</h2>
+          <div class="profile-career">
+            <div class="career-item">
+              <div class="career-dot"></div>
+              <p><strong>10年以上</strong>の温浴施設・スパ施設での施術経験。日々、疲弊した男たちの体と向き合い続けてきた。</p>
+            </div>
+            <div class="career-item">
+              <div class="career-dot"></div>
+              <p>現場仕事・デスクワーク・運転業など、<strong>職種ごとの疲労パターン</strong>を熟知。無駄のない施術で的確に解きほぐす。</p>
+            </div>
+            <div class="career-item">
+              <div class="career-dot"></div>
+              <p>作務衣を身にまとい、<strong>余計な演出を排除</strong>。施術だけに集中できる空間を、あなたの自宅に作り出す。</p>
+            </div>
+          </div>
+          <div class="profile-quote">
+            「男の疲れには、男の施術がある。<br>10年揉んできた手が、あなたの体を覚える。」
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===========================
+         STRENGTH
+    =========================== -->
+    <section class="section">
+      <div class="container">
+        <div class="section-eyebrow reveal">選ばれる理由</div>
+        <h2 class="section-title reveal">TOMOYAMINが選ばれる、<br>4つの理由。</h2>
+        <p class="section-lead reveal">ただ"来てくれる"だけではない。来る意味がある。</p>
+        <div class="strength-grid">
+          <div class="strength-item reveal reveal-delay-1">
+            <div class="strength-num">01</div>
+            <h3>移動ゼロの至福</h3>
+            <p>
+              外に出る必要なし。施術後はそのまま風呂へ、布団へ。
+              体がゆるんだ状態を切らさず、最高の状態で眠れます。
+            </p>
+          </div>
+          <div class="strength-item reveal reveal-delay-2">
+            <div class="strength-num">02</div>
+            <h3>お客様の準備は一切不要</h3>
+            <p>
+              高品質ポータブルベッドを車で持ち込み可能。
+              約2畳のスペースさえあれば、その場で施術環境を整えます。
+            </p>
+          </div>
+          <div class="strength-item reveal reveal-delay-3">
+            <div class="strength-num">03</div>
+            <h3>男の疲労に特化した技術</h3>
+            <p>
+              現場仕事の張り、デスクワークの詰まり。
+              10年の経験で培った、男の体への深い理解と的確なアプローチ。
+            </p>
+          </div>
+          <div class="strength-item reveal reveal-delay-4">
+            <div class="strength-num">04</div>
+            <h3>LINE予約 × キャッシュレスでスマート</h3>
+            <p>
+              問い合わせから予約まで公式LINEで完結。
+              Square対応で現金のやり取りも不要。煩わしさゼロです。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===========================
+         FLOW
+    =========================== -->
+    <section class="section flow">
+      <div class="container">
+        <div class="section-eyebrow reveal">ご利用の流れ</div>
+        <h2 class="section-title reveal">面倒を削ぎ落とし、<br>最短距離で"楽になる"まで。</h2>
+        <div class="flow-steps">
+          <div class="step reveal reveal-delay-1">
+            <div class="step-number">1</div>
+            <h3>公式LINEで予約</h3>
+            <p>
+              ご希望日時・エリアをLINEで送るだけ。
+              空き状況の確認からご案内まで全てLINE完結。
+            </p>
+          </div>
+          <div class="step reveal reveal-delay-2">
+            <div class="step-number">2</div>
+            <h3>ご自宅へ訪問</h3>
+            <p>
+              ご指定の場所へ伺い、ベッド設置または布団利用で施術準備。
+              約2畳のスペースがあればOK。
+            </p>
+          </div>
+          <div class="step reveal reveal-delay-3">
+            <div class="step-number">3</div>
+            <h3>施術後、そのまま休める</h3>
+            <p>
+              終わったら移動せず、そのままゆっくり。
+              体がゆるんだ最高の状態で休息に入れます。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===========================
+         PRICING
+    =========================== -->
+    <section class="section" id="price">
+      <div class="container">
+        <div class="section-eyebrow reveal">料金案内</div>
+        <h2 class="section-title reveal">明確な料金設定。<br>男の疲労に合わせて選べます。</h2>
+        <div class="pricing-wrap">
+          <div class="menu-grid">
+            <div class="menu-card reveal reveal-delay-1">
+              <div class="menu-time">60分</div>
+              <div class="menu-title">標準コース</div>
+              <div class="menu-price">4,500<small>円</small></div>
+              <p>まずは一度試したい方へ。全身をバランスよく整える基本コース。</p>
+            </div>
+            <div class="menu-card featured reveal reveal-delay-2">
+              <div class="menu-badge">人気 No.1</div>
+              <div class="menu-time">90分</div>
+              <div class="menu-title">疲労リセット</div>
+              <div class="menu-price">6,500<small>円</small></div>
+              <p>首肩・腰・足など気になる箇所をしっかり深めに。人気の定番コース。</p>
+            </div>
+            <div class="menu-card reveal reveal-delay-3">
+              <div class="menu-time">120分</div>
+              <div class="menu-title">至福コース</div>
+              <div class="menu-price">8,000<small>円</small></div>
+              <p>疲労がかなり溜まっている方へ。余裕を持って全身をじっくり整えます。</p>
+            </div>
+            <div class="menu-card reveal reveal-delay-4">
+              <div class="menu-time">150分</div>
+              <div class="menu-title">超絶リセット</div>
+              <div class="menu-price">10,000<small>円</small></div>
+              <p>限界寸前の体に。深く、丁寧に、隅まで整えたい方向けの最上位コース。</p>
+            </div>
+          </div>
+          <div class="pricing-side">
+            <div class="side-box reveal">
+              <h3>出張費</h3>
+              <ul>
+                <li>田辺市街・上富田町：<strong>500円</strong></li>
+                <li>片道30分以上のエリア：<strong>1,000円</strong></li>
+              </ul>
+            </div>
+            <div class="side-box reveal reveal-delay-1">
+              <h3>お得な特典</h3>
+              <ul>
+                <li><strong>事前クレジットカード決済</strong>で出張費無料</li>
+                <li><strong>90分以上のコース</strong>で出張費無料</li>
+              </ul>
+            </div>
+            <div class="side-box light reveal reveal-delay-2">
+              <h3>決済方法</h3>
+              <ul>
+                <li>公式LINEからご案内</li>
+                <li>Squareオンラインチェックアウト対応</li>
+                <li>当日の現金のやり取り不要</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===========================
+         SAFETY
+    =========================== -->
+    <section class="section safety">
+      <div class="container">
+        <div class="section-eyebrow reveal">安心への取り組み</div>
+        <h2 class="section-title reveal">安心して受けていただくための、<br>TOMOYAMINの掟。</h2>
+        <div class="safety-box reveal">
+          <p>
+            密室トラブルのリスクを完全に排除するため、
+            当サービスは<strong>完全男性専用</strong>として運営しています。
+          </p>
+          <p>
+            ただし、<strong>ご夫婦同席でご主人様がご同行の場合のみ</strong>、
+            奥様への施術も可能です。
+          </p>
+          <p>
+            安心・安全な環境づくりは、技術と同じくらい大切にしています。
+            ご不明な点はLINEからお気軽にご相談ください。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===========================
+         SCENES
+    =========================== -->
+    <section class="section">
+      <div class="container">
+        <div class="section-eyebrow reveal">利用シーン</div>
+        <h2 class="section-title reveal">"しんどいけど動きたくない"時ほど、<br>真価を発揮します。</h2>
+        <div class="scene-grid">
+          <div class="card reveal reveal-delay-1">
+            <div class="card-icon">🌙</div>
+            <h3>仕事終わりの夜に</h3>
+            <p>
+              店に行く気力はない。でも今の体のまま寝るのはきつい。
+              そんな日の強い味方です。
+            </p>
+          </div>
+          <div class="card reveal reveal-delay-2">
+            <div class="card-icon">🗓️</div>
+            <h3>休日のリセットに</h3>
+            <p>
+              せっかくの休みを疲れたまま終わらせない。
+              翌週へ向けて、体を完全に整える時間に。
+            </p>
+          </div>
+          <div class="card reveal reveal-delay-3">
+            <div class="card-icon">🚨</div>
+            <h3>限界を感じた時に</h3>
+            <p>
+              腰、足、首肩、目の奥までつらい。
+              "もう無理や"と思う前に、呼んでください。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===========================
+         VOICES
+    =========================== -->
+    <section class="section" style="background: var(--ivory);">
+      <div class="container">
+        <div class="section-eyebrow reveal">お客様の声</div>
+        <h2 class="section-title reveal">実際に受けた方の、<br>リアルな声。</h2>
+        <div class="voice-grid">
+          <div class="voice-card reveal reveal-delay-1">
+            <div class="voice-stars">★★★★★</div>
+            <span class="voice-quote-mark">"</span>
+            <p>終わったあと、そのまま自分の布団で寝れるのが最高でした。外に出ずにここまで楽になるとは思わなかったです。</p>
+            <div class="voice-footer">
+              <div class="voice-avatar">T</div>
+              <span>40代 ／ 現場仕事・田辺市</span>
+            </div>
+          </div>
+          <div class="voice-card reveal reveal-delay-2">
+            <div class="voice-stars">★★★★★</div>
+            <span class="voice-quote-mark">"</span>
+            <p>PC作業続きで首と目がきつかったですが、終わった後の抜け感が全然違いました。かなり助かりました。</p>
+            <div class="voice-footer">
+              <div class="voice-avatar">K</div>
+              <span>30代 ／ デスクワーク・上富田町</span>
+            </div>
+          </div>
+          <div class="voice-card reveal reveal-delay-3">
+            <div class="voice-stars">★★★★★</div>
+            <span class="voice-quote-mark">"</span>
+            <p>来てもらえるだけでもありがたいのに、準備もほぼいらんのが楽でした。90分以上で出張費無料なのも頼みやすい。</p>
+            <div class="voice-footer">
+              <div class="voice-avatar">M</div>
+              <span>50代 ／ 自営業・白浜町</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===========================
+         FAQ
+    =========================== -->
+    <section class="section faq">
+      <div class="container">
+        <div class="section-eyebrow reveal">よくあるご質問</div>
+        <h2 class="section-title reveal">気になること、<br>ここで解決してください。</h2>
+        <div class="faq-list reveal">
+          <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">
+              <span class="faq-q-label">Q</span>
+              部屋に何か準備が必要ですか？
+              <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M12 5v14M5 12h14"/>
+              </svg>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                <span class="faq-a-label">A. </span>
+                約2畳分のスペースがあれば、それだけで大丈夫です。ベッドや布団など、施術に必要なものは全てこちらで持参します。お客様が何か準備する必要はありません。
+              </div>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">
+              <span class="faq-q-label">Q</span>
+              予約はどのくらい前にすればいいですか？
+              <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M12 5v14M5 12h14"/>
+              </svg>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                <span class="faq-a-label">A. </span>
+                前日や当日でも、空き状況によっては対応可能です。まずは公式LINEからご連絡ください。早めのご予約ほど日程の融通が利きやすくなります。
+              </div>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">
+              <span class="faq-q-label">Q</span>
+              支払い方法はどうなりますか？
+              <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M12 5v14M5 12h14"/>
+              </svg>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                <span class="faq-a-label">A. </span>
+                LINEにてSquareオンラインチェックアウトのリンクをお送りします。クレジットカードで事前にお支払いいただくことで、当日の現金のやり取りは一切不要です。事前決済の場合は出張費も無料になります。
+              </div>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">
+              <span class="faq-q-label">Q</span>
+              女性も利用できますか？
+              <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M12 5v14M5 12h14"/>
+              </svg>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                <span class="faq-a-label">A. </span>
+                基本的には完全男性専用のサービスです。ただし、ご夫婦で同席いただき、ご主人様がご同行の場合に限り、奥様への施術も対応可能です。詳細はLINEにてご相談ください。
+              </div>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">
+              <span class="faq-q-label">Q</span>
+              対応エリア外でも依頼できますか？
+              <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M12 5v14M5 12h14"/>
+              </svg>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                <span class="faq-a-label">A. </span>
+                エリア外でもご相談は受け付けています。距離に応じた出張費が発生する場合がありますので、まずはLINEからお気軽にお問い合わせください。
+              </div>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">
+              <span class="faq-q-label">Q</span>
+              施術後はどうすればいいですか？
+              <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M12 5v14M5 12h14"/>
+              </svg>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                <span class="faq-a-label">A. </span>
+                施術後は、そのままゆっくりしていただくのが一番です。可能であれば、ぬるめのお風呂でほぐれた体をさらに温め、そのまま眠るのが理想的です。水分補給もお忘れなく。
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===========================
+         AREA
+    =========================== -->
+    <section class="section">
+      <div class="container">
+        <div class="section-eyebrow reveal">対応エリア</div>
+        <h2 class="section-title reveal">和歌山県南部を中心に対応。</h2>
+        <div class="area-box reveal">
+          <p>
+            以下のエリアを中心に対応しています。エリア外の方もまずはご相談ください。
+          </p>
+          <div class="area-list">
+            <span class="area-chip">田辺市</span>
+            <span class="area-chip">上富田町</span>
+            <span class="area-chip">白浜町</span>
+          </div>
+          <div class="area-note">
+            ※片道30分以上のエリアは出張費1,000円です。<br>
+            ※事前クレジットカード決済または90分以上のご予約で出張費無料になります。
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===========================
+         FINAL CTA
+    =========================== -->
+    <section class="section final-cta">
+      <div class="container final-cta-inner">
+        <h2 class="section-title reveal">まだ、その疲労を<br>我慢しますか？</h2>
+        <p class="reveal">
+          もう外に出る気力もない。けれど、このまま寝ても明日がつらい。<br>
+          そんな男のために、TOMOYAMINは動きます。
+        </p>
+        <div class="cta-box reveal">
+          <p class="cta-copy">今すぐLINEで、<br>空き状況を確認する</p>
+          <p class="cta-sub">
+            予約・お問い合わせは公式LINEで完結。<br>
+            スマホから1分で始められます。
+          </p>
+          <div class="cta-btns">
+            <a href="https://line.me/R/ti/p/@750oaokk" class="btn btn-primary" target="_blank" rel="noopener noreferrer" style="min-width: 260px; font-size: 1.05rem;">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 5.94 2 10.77c0 2.68 1.33 5.07 3.42 6.69.14.11.23.29.2.47l-.38 1.83a.44.44 0 0 0 .62.48l2.04-1.01c.15-.07.32-.09.48-.04.61.18 1.25.28 1.92.28 1.64 0 3.15-.5 4.36-1.33-.13 0-.26.01-.39.01-3.15 0-5.7-2.18-5.7-4.87 0-2.69 2.55-4.87 5.7-4.87 3.15 0 5.7 2.18 5.7 4.87 0 .33-.04.65-.1.96C21.5 12.87 22 11.86 22 10.77 22 5.94 17.52 2 12 2Z"/></svg>
+              LINEで予約・相談する
+            </a>
+            <a href="#price" class="btn btn-secondary" style="min-width: 200px;">
+              料金を見る
+            </a>
+          </div>
+          <p class="cta-note">完全男性専用 ／ 田辺市・上富田町・白浜町対応</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===========================
+       FOOTER
+  =========================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 男の疲労リセット TOMOYAMIN All Rights Reserved.</p>
+      <p>
+        予約窓口：<a href="https://line.me/R/ti/p/@750oaokk" target="_blank" rel="noopener noreferrer">公式LINE（@750oaokk）</a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- ===========================
+       FIXED MOBILE LINE CTA
+  =========================== -->
+  <div class="fixed-line-cta">
+    <a href="https://line.me/R/ti/p/@750oaokk" target="_blank" rel="noopener noreferrer">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 5.94 2 10.77c0 2.68 1.33 5.07 3.42 6.69.14.11.23.29.2.47l-.38 1.83a.44.44 0 0 0 .62.48l2.04-1.01c.15-.07.32-.09.48-.04.61.18 1.25.28 1.92.28 1.64 0 3.15-.5 4.36-1.33-.13 0-.26.01-.39.01-3.15 0-5.7-2.18-5.7-4.87 0-2.69 2.55-4.87 5.7-4.87 3.15 0 5.7 2.18 5.7 4.87 0 .33-.04.65-.1.96C21.5 12.87 22 11.86 22 10.77 22 5.94 17.52 2 12 2Z"/></svg>
+      LINEで今すぐ予約する
+    </a>
+  </div>
+
+  <!-- ===========================
+       JAVASCRIPT
+  =========================== -->
+  <script>
+    /* --- Scroll Reveal --- */
+    (function () {
+      const elements = document.querySelectorAll('.reveal');
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('revealed');
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }
+      );
+      elements.forEach((el) => observer.observe(el));
+    })();
+
+    /* --- FAQ Accordion --- */
+    function toggleFaq(btn) {
+      const item = btn.closest('.faq-item');
+      const isOpen = item.classList.contains('open');
+      // Close all
+      document.querySelectorAll('.faq-item.open').forEach((el) => {
+        el.classList.remove('open');
+      });
+      // Open clicked if it was closed
+      if (!isOpen) {
+        item.classList.add('open');
+      }
+    }
+
+    /* --- Smooth anchor scroll with header offset --- */
+    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+      anchor.addEventListener('click', function (e) {
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          const headerHeight = document.querySelector('.site-header').offsetHeight;
+          const targetY = target.getBoundingClientRect().top + window.scrollY - headerHeight - 16;
+          window.scrollTo({ top: targetY, behavior: 'smooth' });
+        }
+      });
+    });
+
+    /* --- Hero orb parallax (subtle) --- */
+    window.addEventListener('scroll', function () {
+      const orb = document.querySelector('.hero-orb');
+      if (orb) {
+        orb.style.transform = `translateY(${window.scrollY * 0.12}px)`;
+      }
+    }, { passive: true });
+  </script>
+
+</body>
+</html>
