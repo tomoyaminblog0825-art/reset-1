@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>プレオープン限定 モニター様募集 | 出張もみほぐし</title>
+<meta name="description" content="プレオープン限定モニター募集。通常料金のほぼ半額で出張もみほぐしをご体験いただけます。上富田町・田辺市・白浜町対応。">
+<style>
+  :root {
+    --navy-900: #0d1b2a;
+    --navy-800: #14253a;
+    --navy-700: #1b2f4d;
+    --navy-600: #243a5e;
+    --gold: #c9a961;
+    --line-green: #06C755;
+    --line-green-hover: #05b04c;
+    --bg-cream: #f7f5f0;
+    --text-dark: #1a2638;
+    --text-light: #ffffff;
+    --text-muted: #6b7280;
+    --border-light: rgba(255, 255, 255, 0.15);
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", "Meiryo", sans-serif;
+    color: var(--text-dark);
+    background: var(--bg-cream);
+    line-height: 1.8;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .container {
+    max-width: 480px;
+    margin: 0 auto;
+    background: var(--bg-cream);
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+  }
+
+  /* ===== Section 1: First View ===== */
+  .hero {
+    background: linear-gradient(135deg, var(--navy-900) 0%, var(--navy-700) 100%);
+    color: var(--text-light);
+    padding: 56px 28px 64px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    right: -30%;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(201, 169, 97, 0.08) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+
+  .hero-badge {
+    display: inline-block;
+    background: var(--gold);
+    color: var(--navy-900);
+    font-size: 12px;
+    letter-spacing: 0.15em;
+    padding: 6px 18px;
+    border-radius: 2px;
+    font-weight: 600;
+    margin-bottom: 28px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero-title {
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    letter-spacing: 0.02em;
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero-title .accent {
+    color: var(--gold);
+    font-size: 32px;
+    display: block;
+    margin: 8px 0;
+  }
+
+  .hero-sub {
+    font-size: 14px;
+    opacity: 0.85;
+    margin-bottom: 36px;
+    line-height: 1.8;
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero-divider {
+    width: 40px;
+    height: 1px;
+    background: var(--gold);
+    margin: 32px auto;
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero-message {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    line-height: 1.7;
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero-detail {
+    font-size: 15px;
+    opacity: 0.9;
+    line-height: 1.9;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* ===== Section Common ===== */
+  section {
+    padding: 64px 28px;
+  }
+
+  .section-label {
+    display: block;
+    text-align: center;
+    font-size: 11px;
+    letter-spacing: 0.3em;
+    color: var(--gold);
+    margin-bottom: 12px;
+    font-weight: 600;
+  }
+
+  .section-title {
+    text-align: center;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--navy-900);
+    margin-bottom: 36px;
+    line-height: 1.6;
+    letter-spacing: 0.02em;
+  }
+
+  .section-title::after {
+    content: "";
+    display: block;
+    width: 32px;
+    height: 2px;
+    background: var(--gold);
+    margin: 16px auto 0;
+  }
+
+  /* ===== Section 2: Empathy ===== */
+  .empathy {
+    background: #ffffff;
+  }
+
+  .worry-list {
+    list-style: none;
+    margin-bottom: 28px;
+  }
+
+  .worry-list li {
+    padding: 18px 24px;
+    background: var(--bg-cream);
+    border-left: 3px solid var(--gold);
+    margin-bottom: 12px;
+    font-size: 16px;
+    color: var(--navy-900);
+    font-weight: 500;
+  }
+
+  .empathy-message {
+    text-align: center;
+    font-size: 16px;
+    color: var(--text-dark);
+    line-height: 2;
+    margin-top: 32px;
+    padding: 24px;
+    border-top: 1px solid #e5e0d5;
+    border-bottom: 1px solid #e5e0d5;
+  }
+
+  /* ===== Section 3: Service ===== */
+  .service {
+    background: var(--bg-cream);
+  }
+
+  .service-card {
+    background: #ffffff;
+    padding: 32px 24px;
+    border-radius: 4px;
+    box-shadow: 0 4px 20px rgba(13, 27, 42, 0.06);
+    margin-bottom: 20px;
+  }
+
+  .service-card p {
+    font-size: 15px;
+    line-height: 2;
+    color: var(--text-dark);
+    margin-bottom: 16px;
+  }
+
+  .service-card p:last-child {
+    margin-bottom: 0;
+  }
+
+  .service-card .highlight {
+    color: var(--navy-700);
+    font-weight: 600;
+  }
+
+  /* ===== Section 4: Monitor ===== */
+  .monitor {
+    background: var(--navy-900);
+    color: var(--text-light);
+    text-align: center;
+  }
+
+  .monitor .section-title {
+    color: var(--text-light);
+  }
+
+  .monitor-intro {
+    font-size: 15px;
+    line-height: 2;
+    margin-bottom: 32px;
+    opacity: 0.9;
+  }
+
+  .benefit-box {
+    background: linear-gradient(135deg, var(--gold) 0%, #b89345 100%);
+    color: var(--navy-900);
+    padding: 32px 24px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    box-shadow: 0 8px 24px rgba(201, 169, 97, 0.25);
+  }
+
+  .benefit-label {
+    font-size: 13px;
+    letter-spacing: 0.2em;
+    font-weight: 600;
+    margin-bottom: 12px;
+  }
+
+  .benefit-main {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+
+  .benefit-price {
+    font-size: 32px;
+    font-weight: 800;
+    letter-spacing: 0.05em;
+  }
+
+  .monitor-note {
+    font-size: 13px;
+    opacity: 0.7;
+    margin-top: 16px;
+  }
+
+  /* ===== Section 5: Schedule ===== */
+  .schedule {
+    background: #ffffff;
+  }
+
+  .schedule-card {
+    background: var(--bg-cream);
+    border: 1px solid #e5e0d5;
+    border-radius: 4px;
+    padding: 24px;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .schedule-card.featured {
+    background: var(--navy-900);
+    color: var(--text-light);
+    border-color: var(--navy-900);
+  }
+
+  .schedule-date {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--navy-900);
+    margin-bottom: 4px;
+  }
+
+  .schedule-card.featured .schedule-date {
+    color: var(--text-light);
+  }
+
+  .schedule-time {
+    font-size: 14px;
+    color: var(--text-muted);
+  }
+
+  .schedule-card.featured .schedule-time {
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  .schedule-status {
+    font-size: 12px;
+    padding: 6px 12px;
+    border-radius: 2px;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+
+  .schedule-status.urgent {
+    background: #d63838;
+    color: #fff;
+  }
+
+  .schedule-status.available {
+    background: var(--gold);
+    color: var(--navy-900);
+  }
+
+  .schedule-warning {
+    text-align: center;
+    font-size: 13px;
+    color: #d63838;
+    margin-top: 20px;
+    font-weight: 600;
+  }
+
+  /* ===== Section 6: CTA ===== */
+  .cta {
+    background: linear-gradient(135deg, var(--navy-800) 0%, var(--navy-600) 100%);
+    color: var(--text-light);
+    text-align: center;
+  }
+
+  .cta .section-title {
+    color: var(--text-light);
+  }
+
+  .cta-intro {
+    font-size: 16px;
+    margin-bottom: 32px;
+    opacity: 0.95;
+  }
+
+  .step-list {
+    text-align: left;
+    margin-bottom: 36px;
+  }
+
+  .step-item {
+    display: flex;
+    gap: 16px;
+    padding: 20px 20px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid var(--border-light);
+    border-radius: 4px;
+    margin-bottom: 12px;
+  }
+
+  .step-num {
+    flex-shrink: 0;
+    width: 32px;
+    height: 32px;
+    background: var(--gold);
+    color: var(--navy-900);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 15px;
+  }
+
+  .step-text {
+    font-size: 14px;
+    line-height: 1.7;
+    flex: 1;
+  }
+
+  .line-button {
+    display: block;
+    width: 100%;
+    background: var(--line-green);
+    color: #ffffff;
+    text-decoration: none;
+    padding: 22px 20px;
+    border-radius: 6px;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    box-shadow: 0 8px 24px rgba(6, 199, 85, 0.35);
+    transition: all 0.2s ease;
+    margin-bottom: 16px;
+    border: none;
+    cursor: pointer;
+  }
+
+  .line-button:hover,
+  .line-button:active {
+    background: var(--line-green-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 28px rgba(6, 199, 85, 0.45);
+  }
+
+  .line-icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    border-radius: 4px;
+    margin-right: 8px;
+    vertical-align: middle;
+    color: var(--line-green);
+    font-weight: 800;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+  }
+
+  .cta-secondary {
+    font-size: 14px;
+    margin-top: 24px;
+    padding: 16px;
+    border: 1px dashed var(--border-light);
+    border-radius: 4px;
+    opacity: 0.95;
+  }
+
+  /* ===== Section 7: Notes ===== */
+  .notes {
+    background: var(--bg-cream);
+    padding: 48px 28px;
+  }
+
+  .notes-title {
+    text-align: center;
+    font-size: 14px;
+    letter-spacing: 0.2em;
+    color: var(--text-muted);
+    margin-bottom: 24px;
+    font-weight: 600;
+  }
+
+  .notes-list {
+    list-style: none;
+    background: #ffffff;
+    border-radius: 4px;
+    padding: 8px 24px;
+  }
+
+  .notes-list li {
+    padding: 14px 0;
+    border-bottom: 1px solid #f0ebe0;
+    font-size: 13px;
+    color: var(--text-dark);
+    line-height: 1.7;
+    position: relative;
+    padding-left: 18px;
+  }
+
+  .notes-list li::before {
+    content: "・";
+    position: absolute;
+    left: 0;
+    color: var(--gold);
+    font-weight: 700;
+  }
+
+  .notes-list li:last-child {
+    border-bottom: none;
+  }
+
+  /* ===== Footer ===== */
+  footer {
+    background: var(--navy-900);
+    color: var(--text-light);
+    text-align: center;
+    padding: 32px 28px;
+    font-size: 12px;
+    opacity: 0.7;
+  }
+
+  /* ===== Sticky LINE Button (mobile) ===== */
+  .sticky-cta {
+    position: fixed;
+    bottom: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 32px);
+    max-width: 448px;
+    z-index: 100;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+  }
+
+  .sticky-cta.visible {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .sticky-cta a {
+    display: block;
+    background: var(--line-green);
+    color: #fff;
+    text-decoration: none;
+    padding: 16px;
+    border-radius: 50px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 15px;
+    box-shadow: 0 8px 24px rgba(6, 199, 85, 0.4);
+  }
+
+  /* ===== Responsive ===== */
+  @media (min-width: 481px) {
+    body {
+      padding: 0;
+      background: #1a1a1a;
+    }
+  }
+
+  @media (max-width: 380px) {
+    .hero-title { font-size: 22px; }
+    .hero-title .accent { font-size: 28px; }
+    .section-title { font-size: 20px; }
+    section { padding: 56px 24px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- ① ファーストビュー -->
+  <section class="hero">
+    <span class="hero-badge">PRE-OPEN LIMITED</span>
+    <h1 class="hero-title">
+      プレオープン限定<br>
+      <span class="accent">モニター様募集</span>
+    </h1>
+    <p class="hero-sub">
+      通常料金の<strong>"ほぼ半額"</strong>で<br>
+      出張もみほぐしをご体験いただけます
+    </p>
+    <div class="hero-divider"></div>
+    <p class="hero-message">「その疲れ、<br>今日のうちに整えませんか？」</p>
+    <p class="hero-detail">
+      ご自宅でそのまま施術<br>
+      そのまま休めます
+    </p>
+  </section>
+
+  <!-- ② 共感 -->
+  <section class="empathy">
+    <span class="section-label">YOUR WORRIES</span>
+    <h2 class="section-title">こんなお悩み<br>ありませんか？</h2>
+    <ul class="worry-list">
+      <li>肩や腰が重い</li>
+      <li>疲れが抜けない</li>
+      <li>外に出るのがしんどい</li>
+    </ul>
+    <p class="empathy-message">
+      そんな方に向けた<br>
+      <strong>出張リラクゼーション</strong>です
+    </p>
+  </section>
+
+  <!-- ③ サービス説明 -->
+  <section class="service">
+    <span class="section-label">OUR SERVICE</span>
+    <h2 class="section-title">サービスについて</h2>
+    <div class="service-card">
+      <p>
+        ご自宅へお伺いし、<br>
+        <span class="highlight">お一人おひとりの状態</span>に合わせて<br>
+        施術いたします
+      </p>
+    </div>
+    <div class="service-card">
+      <p>
+        <span class="highlight">移動の負担がなく</span>、<br>
+        施術後はそのまま<br>
+        ゆっくりお休みいただけます
+      </p>
+    </div>
+  </section>
+
+  <!-- ④ モニター募集 -->
+  <section class="monitor">
+    <span class="section-label" style="color: var(--gold);">MONITOR CAMPAIGN</span>
+    <h2 class="section-title">モニター募集中</h2>
+    <p class="monitor-intro">
+      現在プレオープン期間のため<br>
+      モニター様を募集しております
+    </p>
+    <div class="benefit-box">
+      <div class="benefit-label">特典</div>
+      <div class="benefit-main">施術料金</div>
+      <div class="benefit-price">ほぼ半額</div>
+    </div>
+    <p class="monitor-note">※ 簡単なアンケートにご協力をお願いいたします</p>
+  </section>
+
+  <!-- ⑤ 日程 -->
+  <section class="schedule">
+    <span class="section-label">SCHEDULE</span>
+    <h2 class="section-title">ご予約可能日程</h2>
+
+    <div class="schedule-card featured">
+      <div>
+        <div class="schedule-date">5月12日</div>
+        <div class="schedule-time">20:00 〜 23:00</div>
+      </div>
+      <div class="schedule-status urgent">残り1枠</div>
+    </div>
+
+    <div class="schedule-card">
+      <div>
+        <div class="schedule-date">5月19日</div>
+        <div class="schedule-time">特別枠にてご案内</div>
+      </div>
+      <div class="schedule-status available">受付中</div>
+    </div>
+
+    <div class="schedule-card">
+      <div>
+        <div class="schedule-date">5月26日</div>
+        <div class="schedule-time">特別枠にてご案内</div>
+      </div>
+      <div class="schedule-status available">受付中</div>
+    </div>
+
+    <p class="schedule-warning">※ 埋まり次第終了</p>
+  </section>
+
+  <!-- ⑥ 予約方法（CTA） -->
+  <section class="cta" id="cta">
+    <span class="section-label" style="color: var(--gold);">EASY RESERVATION</span>
+    <h2 class="section-title">ご予約はとても簡単</h2>
+    <p class="cta-intro">3ステップで完了します</p>
+
+    <div class="step-list">
+      <div class="step-item">
+        <div class="step-num">1</div>
+        <div class="step-text">
+          下記ボタンから<br>
+          <strong>公式LINE</strong>を友だち追加
+        </div>
+      </div>
+      <div class="step-item">
+        <div class="step-num">2</div>
+        <div class="step-text">
+          トーク画面で<br>
+          <strong>「モニター」</strong>と送信
+        </div>
+      </div>
+      <div class="step-item">
+        <div class="step-num">3</div>
+        <div class="step-text">
+          自動で予約フォームが届きます<br>
+          → <strong>日時を選択して完了</strong>
+        </div>
+      </div>
+    </div>
+
+    <a href="https://lin.ee/pCsJffH" class="line-button" target="_blank" rel="noopener">
+      <span class="line-icon">L</span>LINEで予約する
+    </a>
+
+    <a href="https://lin.ee/pCsJffH" class="line-button" target="_blank" rel="noopener" style="background: #ffffff; color: var(--line-green); box-shadow: 0 8px 24px rgba(255,255,255,0.15); border: 2px solid #ffffff;">
+      今すぐ空き枠を確認
+    </a>
+
+    <div class="cta-secondary">
+      「まだ空いてますか？」<br>
+      だけでも大丈夫です
+    </div>
+  </section>
+
+  <!-- ⑦ 注意事項 -->
+  <section class="notes">
+    <div class="notes-title">― 注意事項 ―</div>
+    <ul class="notes-list">
+      <li>対応エリア：上富田町・田辺市・白浜町</li>
+      <li>遠方は事前決済のみ</li>
+      <li>男性専門（女性はご夫婦・同伴のみ対応）</li>
+    </ul>
+  </section>
+
+  <footer>
+    出張もみほぐし<br>
+    プレオープン記念モニター募集
+  </footer>
+
+</div>
+
+<!-- Sticky CTA -->
+<div class="sticky-cta" id="stickyCta">
+  <a href="https://lin.ee/pCsJffH" target="_blank" rel="noopener">
+    <span class="line-icon">L</span>LINEで予約する
+  </a>
+</div>
+
+<script>
+  // Show sticky CTA after scrolling past hero
+  const stickyCta = document.getElementById('stickyCta');
+  const hero = document.querySelector('.hero');
+
+  window.addEventListener('scroll', () => {
+    const heroBottom = hero.offsetTop + hero.offsetHeight;
+    if (window.scrollY > heroBottom) {
+      stickyCta.classList.add('visible');
+    } else {
+      stickyCta.classList.remove('visible');
+    }
+  });
+</script>
+
+</body>
+</html>
